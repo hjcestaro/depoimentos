@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depoimentos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hero">
+        <h1>Depoimentos</h1>
+        <div class="review-box">
+            <div id="slide">
+                <div class="card">
+                    <div class="profile">
+                        <img src="./img/img1.png" alt="">
+                        <div>
+                            <h3>Pedro Rocha</h3>
+                            <p>Front End</p>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ducimus omnis inventore quo
+                        quisquam, fuga harum animi quae fugit dignissimos consectetur esse laudantium architecto itaque.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="profile">
+                        <img src="./img/img2.png" alt="">
+                        <div>
+                            <h3>Carlos Alberto</h3>
+                            <p>Software Enginner</p>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ducimus omnis inventore quo
+                        quisquam, fuga harum animi quae fugit dignissimos consectetur esse laudantium architecto itaque.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="profile">
+                        <img src="./img/img3.png" alt="">
+                        <div>
+                            <h3>Carla Cristina</h3>
+                            <p>Ux Designer</p>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ducimus omnis inventore quo
+                        quisquam, fuga harum animi quae fugit dignissimos consectetur esse laudantium architecto itaque.
+                    </p>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <i class="fas fa-arrow-circle-up" id="upArrow"></i>
+                <i class="fas fa-arrow-circle-down" id="downArrow"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var slide = document.getElementById('slide')
+        var upArrow = document.getElementById('upArrow')
+        var downArrow = document.getElementById('downArrow')
+
+        let x = 0;
+
+        upArrow.onclick = () => {
+            if (x > '-600') {
+                x = x - 300;
+                slide.style.top = x + 'px'
+            }
+        }
+
+        downArrow.onclick = () => {
+            if (x < 0) {
+                x = x + 300;
+                slide.style.top = x + 'px'
+            }
+        }
+
+    </script>
+</body>
+
+</html>
